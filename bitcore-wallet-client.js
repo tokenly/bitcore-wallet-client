@@ -10393,6 +10393,7 @@ bitcore.versionGuard = function(version) {
     throw new Error(message);
   }
 };
+delete global._bitcore;
 bitcore.versionGuard(global._bitcore);
 global._bitcore = bitcore.version;
 
@@ -41751,7 +41752,6 @@ module.exports = Message;
 var bitcore = module.exports;
 
 // module information
-delete global._bitcore;
 bitcore.version = 'v' + require('./package.json').version;
 bitcore.versionGuard = function(version) {
   if (version !== undefined) {
@@ -41761,6 +41761,7 @@ bitcore.versionGuard = function(version) {
     throw new Error(message);
   }
 };
+delete global._bitcore;
 bitcore.versionGuard(global._bitcore);
 global._bitcore = bitcore.version;
 
