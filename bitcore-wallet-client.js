@@ -397,12 +397,9 @@ API.prototype.mnemonicHasPassphrase = function() {
 };
 
 
-
 API.prototype.clearMnemonic = function() {
   return this.credentials.clearMnemonic();
 };
-
-
 
 API.prototype.getClearSignedMessage = function(address, xpriv, message, cb) {
   var type = '44';
@@ -428,7 +425,6 @@ API.prototype.getMessageVerification = function(message, signature, pubKey, cb) 
   return cb(result);
 };
 
-
 /**
  * Seed from extended private key
  *
@@ -446,7 +442,7 @@ API.prototype.seedFromExtendedPrivateKey = function(xPrivKey, opts) {
  * Seed from Mnemonics (language autodetected)
  * Can throw an error if mnemonic is invalid
  *
- * @param {String} BIP39 words
+ * @param {String} BIP39 wordss
  * @param {Object} opts
  * @param {String} opts.network - default 'livenet'
  * @param {String} opts.passphrase
