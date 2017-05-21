@@ -41751,6 +41751,7 @@ module.exports = Message;
 var bitcore = module.exports;
 
 // module information
+delete global._bitcore;
 bitcore.version = 'v' + require('./package.json').version;
 bitcore.versionGuard = function(version) {
   if (version !== undefined) {
